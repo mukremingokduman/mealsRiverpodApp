@@ -1,2 +1,1 @@
-A new Flutter meals riverpod project.
-
+https://thebsd.github.io/StandWithPalestine/

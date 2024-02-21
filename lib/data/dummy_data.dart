@@ -1,18 +1,23 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:meals_riverpod_app/generated/locale_keys.g.dart';
+
 import '../models/category.dart';
 import '../models/meal.dart';
 import 'package:flutter/material.dart';
- 
+
+final String italian = LocaleKeys.italian.tr();
+final String quick_easy = LocaleKeys.quick_easy.tr();
 
 // Constants in Dart should be written in lowerCamelcase.
-const availableCategories = [
+List<Category> availableCategories = [
   Category(
     id: 'c1',
-    title: 'Italian',
+    title: italian,
     color: Colors.purple,
   ),
   Category(
     id: 'c2',
-    title: 'Quick & Easy',
+    title: quick_easy,
     color: Colors.red,
   ),
   Category(

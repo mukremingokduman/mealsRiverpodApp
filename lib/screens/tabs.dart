@@ -1,3 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
+
+import '../generated/locale_keys.g.dart';
 import '../providers/favorites_provider.dart';
 import '../providers/filters_provider.dart';
 import '../screens/categories.dart';
@@ -43,6 +46,9 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     }
   }
 
+  final String categories = LocaleKeys.categories.tr();
+  final String favorites = LocaleKeys.favorites.tr();
+
   @override
   Widget build(BuildContext context) {
     final availableMeals = ref.watch(filteredMealsProvider);
@@ -50,14 +56,14 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     Widget activePage = CategoriesScreen(
       availableMeals: availableMeals,
     );
-    var activePageTitle = 'Categories';
+    var activePageTitle = LocaleKeys.categories.tr();
 
     if (_selectedPageIndex == 1) {
       final favoriteMeals = ref.watch(favoriteMealsProvider);
       activePage = MealsScreen(
         meals: favoriteMeals,
       );
-      activePageTitle = 'Your Favorites';
+      activePageTitle = LocaleKeys.favorites.tr();
     }
 
     return Scaffold(
@@ -71,14 +77,14 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
         currentIndex: _selectedPageIndex,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.set_meal),
-            label: 'Categories',
+            icon: const Icon(Icons.set_meal),
+            label: categories,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
-            label: 'Favorites',
+            icon: const Icon(Icons.star),
+            label: favorites,
           ),
         ],
       ),

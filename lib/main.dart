@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-//import '../styles/themes.dart';
 import '../contants/routes.dart';
 import '../contants/globals.dart';
 import '../types/localication_type.dart';

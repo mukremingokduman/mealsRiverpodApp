@@ -52,6 +52,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     );
     var activePageTitle = 'Categories';
     var activePageTitleeeeee = 'Categoriessssss';
+    var activePageTitlllll = 'Categorieklnglkdngksn';
 
     if (_selectedPageIndex == 1) {
       final favoriteMeals = ref.watch(favoriteMealsProvider);
